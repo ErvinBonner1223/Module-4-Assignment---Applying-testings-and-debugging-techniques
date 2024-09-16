@@ -1,0 +1,34 @@
+start
+	Declarations
+		num mortgagePayment
+		num utilities
+		num taxes
+		num upkeep
+		num total
+		mtgPayment= "mortgage payment"
+	startup()
+	while mortgagePayment <> to 0
+		MainLoop()
+	endwhile
+	finishUp()
+	stop
+
+	startUp()
+		input mtgPayment
+		output "Enter your mortgage payment or 0 to quit"
+	return
+
+	mainLoop()
+		input utilities
+		output "utilities"
+		input taxes
+		output "taxes"
+		input upkeep
+		output "amount for upkeep"
+		total = mortgagePayment + utilities + taxes + upkeep
+		output "Total is ", total
+	return
+
+	finishUp()
+		output "End of program"
+	return
